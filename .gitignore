@@ -1,0 +1,21 @@
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+.env
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Fichiers générés
+*.png
+*.jpg
+*.svg

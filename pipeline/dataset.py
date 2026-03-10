@@ -148,7 +148,9 @@ def create_dataloaders(
     dataset_train = TensorDataset(X_train, y_train)
     dataset_val = TensorDataset(X_val, y_val)
 
-    # Shuffle=True pour l'entraînement, False pour la validation (ordre temporel)
+    # Shuffle=True pour l'entraînement (améliore la convergence au sein de
+    # la fenêtre d'entraînement déjà découpée chronologiquement).
+    # Shuffle=False pour la validation (préserve l'ordre temporel pour l'évaluation).
     train_loader = DataLoader(dataset_train, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(dataset_val, batch_size=batch_size, shuffle=False)
 
